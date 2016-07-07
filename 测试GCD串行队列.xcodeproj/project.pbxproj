@@ -13,6 +13,7 @@
 		1885E4641D1CC064003EFCB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1885E4621D1CC064003EFCB2 /* Main.storyboard */; };
 		1885E4661D1CC064003EFCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1885E4651D1CC064003EFCB2 /* Assets.xcassets */; };
 		1885E4691D1CC064003EFCB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1885E4671D1CC064003EFCB2 /* LaunchScreen.storyboard */; };
+		1885E4721D1CC09D003EFCB2 /* TXSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885E4711D1CC09D003EFCB2 /* TXSoundPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1885E4651D1CC064003EFCB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1885E4681D1CC064003EFCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1885E46A1D1CC064003EFCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1885E4701D1CC09D003EFCB2 /* TXSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSoundPlayer.h; sourceTree = "<group>"; };
+		1885E4711D1CC09D003EFCB2 /* TXSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSoundPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		1885E4581D1CC064003EFCB2 /* 测试GCD串行队列 */ = {
 			isa = PBXGroup;
 			children = (
+				1885E4701D1CC09D003EFCB2 /* TXSoundPlayer.h */,
+				1885E4711D1CC09D003EFCB2 /* TXSoundPlayer.m */,
 				1885E45C1D1CC064003EFCB2 /* AppDelegate.h */,
 				1885E45D1D1CC064003EFCB2 /* AppDelegate.m */,
 				1885E45F1D1CC064003EFCB2 /* ViewController.h */,
@@ -110,6 +115,7 @@
 				TargetAttributes = {
 					1885E4551D1CC064003EFCB2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = NUUXNGN3KW;
 					};
 				};
 			};
@@ -149,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1885E4721D1CC09D003EFCB2 /* TXSoundPlayer.m in Sources */,
 				1885E4611D1CC064003EFCB2 /* ViewController.m in Sources */,
 				1885E45E1D1CC064003EFCB2 /* AppDelegate.m in Sources */,
 				1885E45B1D1CC064003EFCB2 /* main.m in Sources */,
@@ -263,10 +270,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "测试GCD串行队列/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caicai.dy.--GCD----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +285,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "测试GCD串行队列/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caicai.dy.--GCD----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -300,6 +315,7 @@
 				1885E46F1D1CC064003EFCB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

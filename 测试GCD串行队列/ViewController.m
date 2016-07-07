@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TXSoundPlayer.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)buttonClicked
+{
+    NSLog(@"当前运行系统为：iOS%@",[[UIDevice currentDevice] systemVersion]);
+    [self ceshi:@"测试GCD串行队列"];
+}
+
+- (void)ceshi:(NSString *)text
+{
+    TXSoundPlayer *player = [TXSoundPlayer soundPlayerInstance];
+    [player play:text];
 }
 
 - (void)didReceiveMemoryWarning {
